@@ -38,22 +38,14 @@ class _MyAppState extends State<MyApp> with UnityAdsListener {
   }
 
   @override
-  void onUnityAdsError(UnityAdsError error, String message) {
-    // TODO: implement onUnityAdsError
-  }
+  void onUnityAdsError(UnityAdsError error, String message) {}
 
   @override
-  void onUnityAdsFinish(String placementId, FinishState result) {
-    // TODO: implement onUnityAdsFinish
-  }
+  void onUnityAdsFinish(String placementId, FinishState result) {}
 
   @override
-  void onUnityAdsReady(String placementId) {
-    // TODO: implement onUnityAdsReady
-  }
+  void onUnityAdsReady(String placementId) {}
 
   @override
-  void onUnityAdsStart(String placementId) {
-    // TODO: implement onUnityAdsStart
-  }
+  void onUnityAdsStart(String placementId) {}
 }
