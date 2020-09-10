@@ -44,8 +44,8 @@ class _MyAppState extends State<MyApp> with UnityAdsListener {
   void onUnityAdsFinish(String placementId, FinishState result) {}
 
   @override
-  void onUnityAdsReady(String placementId) {}
+  void onUnityAdsReady(dynamic placementId) {}
 
   @override
-  void onUnityAdsStart(String placementId) {}
+  void onUnityAdsStart(dynamic placementId) {}
 }

@@ -41,8 +41,7 @@ class UnityAds {
     } else if (Platform.isIOS) {
       gameId = gameIosId;
     } else {
-      throw new UnsupportedError(
-          'Unsupported Platform! Only Android and IOS are supported!');
+      throw new UnsupportedError('Unsupported Platform! Only Android and IOS are supported!');
     }
     _listener = listener;
     _channel.setMethodCallHandler(_listener._handle);
@@ -89,11 +88,11 @@ class UnityAds {
 abstract class UnityAdsListener {
   Future<Null> _handle(MethodCall methodCall) async {
     if (methodCall.method == 'onUnityAdsError') {
-      onUnityAdsError(UnityAdsError.values[methodCall.arguments['error']],
-          methodCall.arguments['message']);
+      onUnityAdsError(
+          UnityAdsError.values[methodCall.arguments['error']], methodCall.arguments['message']);
     } else if (methodCall.method == 'onUnityAdsFinish') {
-      onUnityAdsFinish(methodCall.arguments['placementId'],
-          FinishState.values[methodCall.arguments['result']]);
+      onUnityAdsFinish(
+          methodCall.arguments['placementId'], FinishState.values[methodCall.arguments['result']]);
     } else if (methodCall.method == 'onUnityAdsReady') {
       onUnityAdsReady(methodCall.arguments);
     } else if (methodCall.method == 'onUnityAdsStart') {
@@ -105,7 +104,7 @@ abstract class UnityAdsListener {
 
   void onUnityAdsFinish(String placementId, FinishState result);
 
-  void onUnityAdsReady(String placementId);
+  void onUnityAdsReady(dynamic placementId);
 
-  void onUnityAdsStart(String placementId);
+  void onUnityAdsStart(dynamic placementId);
 }
